@@ -1,4 +1,4 @@
-FROM eva/php
+FROM saint/php
 
 # RUN apt-get install -y gcc autoconf bison flex libtool make libboost-all-dev libcurl4-openssl-dev curl libevent-dev memcached uuid-dev libsqlite3-dev libmysqlclient-dev
 # COPY gearmand.tgz /home/gearmand.tgz
