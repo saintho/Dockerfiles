@@ -4,41 +4,10 @@
 
 Mac系统，已经安装过以下组件：
 
-- VirtualBox
+- DockerToolbox
 - git
-- Homebrew
-- pip
 
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew install wget
-sudo easy_install pip
-```
-
-## 安装Docker/Boot2Docker/Docker-Compose
-
-```
-brew update
-brew tap homebrew/binary
-brew install docker boot2docker
-sudo pip install -U docker-compose
-```
-
-
-初始化Boot2docker，Boot2docker默认会从AWS下载镜像，此处需要翻墙
-
-如果无法翻墙可以手动下载Boot2Docker所需ISO镜像
-
-```
-wget http://192.168.11.180/boot2docker.iso -O ~/.boot2docker/boot2docker.iso
-```
-
-```
-boot2docker init
-boot2docker start
-```
-
 内存充足的话，建议将虚拟机内存调整到4GB
 
 ```
@@ -56,22 +25,7 @@ fi
 
 ### 设置Docker镜像，加速下载
 
-Mac下：
-
-```
-boot2docker ssh
-sudo vi /var/lib/boot2docker/profile
-EXTRA_ARGS="--registry-mirror=http://192.168.11.180:5000"
-boot2docker restart
-```
-
-Ubuntu下:
-
-```
-vi /etc/default/docker
-DOCKER_OPTS=" --registry-mirror http://192.168.11.180:5000 --insecure-registry 192.168.11.180:5000"
-service docker restart
-```
+参考DaoCloud网站列子
 
 ## 启动EvaSkeleton
 
@@ -91,7 +45,7 @@ Clone本项目
 
 ```
 cd ~/opt/htdocs
-git clone https://github.com/EvaEngine/
+git clone https://github.com/saintho/Dockerfiles.git
 Dockerfiles.git
 cd Dockerfiles
 ```
@@ -115,7 +69,7 @@ docker-compose up
 ```
 sudo vi /etc/hosts
 加入
-192.168.59.103 docker local.evaengine.com static.evaengine.com
+192.168.99.100 docker local.evaengine.com static.evaengine.com
 ```
 
 现在可以通过访问`http://docker/`来查看Web服务器根目录
