@@ -10,25 +10,8 @@ dl:
 	wget https://getcomposer.org/composer.phar -O php/composer.phar
 
 build:
-	make build-nginx
-	make build-mysql
 	make build-php
-	make build-node
-
-build-nginx:
-	docker build -t saint/nginx ./nginx
 
 build-php:
 	docker build -t saint/php ./php
 
-build-mysql:
-	docker build -t saint/mysql ./mysql
-
-build-node:
-	docker build -t saint/node ./node
-
-build-elasticsearch:
-	docker build -t saint/elasticsearch ./elasticsearch
-
-build-gearman:
-	docker build -t saint/gearman ./gearman
