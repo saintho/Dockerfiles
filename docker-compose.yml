@@ -18,6 +18,8 @@ php:
       - "gearman"
     volumes:
       - ~/opt:/opt
+    dns:
+      - "192.168.1.11"
 
 mysql:
     build: ./mysql
