@@ -1,0 +1,53 @@
+127.0.0.1 local.aipai.com
+127.0.0.1 localsy.aipai.com
+127.0.0.1 comment.aipai.com
+127.0.0.1 gateway.bus.aipai.com
+#127.0.0.1 www1.aipai.com
+#127.0.0.1 res.weplay.cn
+
+#192.168.1.11 home.aipai.com
+#127.0.0.1 m.aipai.com
+#127.0.0.1 www.aipai.com
+#127.0.0.1 www1.aipai.com
+#192.168.1.11 www1.aipai.com
+
+
+127.0.0.1 gateway.bus.aipai.com
+
+192.168.1.11 test.aipai.com
+
+192.168.1.11 db.aipai.com
+192.168.1.11 db_shouyou.aipai.com
+192.168.1.11 stats.db.aipai.com
+192.168.1.11 dispatch.db.aipai.com
+192.168.1.11 comment.db.aipai.com
+
+
+192.168.1.11 cache_lvs1.aipai.com
+
+192.168.1.11 play_cache1.aipai.com
+192.168.1.11 search_cache1.aipai.com
+
+192.168.1.11 exp_cache1.aipai.com
+
+192.168.1.11 notify_cache1.aipai.com
+192.168.1.11 comment_cache1.aipai.com
+192.168.1.11 comment_cache2.aipai.com
+
+192.168.1.11 stats_cache1.aipai.com
+192.168.1.11 stats_cache2.aipai.com
+192.168.1.11 appsInfo_cache1.aipai.com
+192.168.1.11 master1.db.aipai.com
+192.168.1.11 master2.db.aipai.com
+
+192.168.1.11 db.slave.1.aipai.com
+192.168.1.11 db.slave.2.aipai.com
+192.168.1.11 db.slave.3.aipai.com
+192.168.1.11 db.slave.4.aipai.com
+192.168.1.11 db.slave.5.aipai.com
+192.168.1.11 db.slave.6.aipai.com
+
+192.168.1.11 redis.1.aipai.com
+192.168.1.11 redis.2.aipai.com
+192.168.1.11 redis.3.aipai.com
+192.168.1.11 redis.4.aipai.com
