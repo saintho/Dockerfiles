@@ -1,18 +1,7 @@
-127.0.0.1 local.aipai.com
-127.0.0.1 localsy.aipai.com
-127.0.0.1 comment.aipai.com
-127.0.0.1 gateway.bus.aipai.com
-#127.0.0.1 www1.aipai.com
-#127.0.0.1 res.weplay.cn
-
-#192.168.1.11 home.aipai.com
-#127.0.0.1 m.aipai.com
-#127.0.0.1 www.aipai.com
-#127.0.0.1 www1.aipai.com
-#192.168.1.11 www1.aipai.com
-
-
-127.0.0.1 gateway.bus.aipai.com
+192.168.99.100 local.aipai.com
+192.168.99.100 localsy.aipai.com
+192.168.99.100 comment.aipai.com
+192.168.99.100 gateway.bus.aipai.com
 
 192.168.1.11 test.aipai.com
 

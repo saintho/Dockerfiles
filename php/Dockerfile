@@ -11,6 +11,10 @@ RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libpng12-dev \
+        zlib1g-dev \
+        libicu-dev \
+        libxml2-dev \
+        g++ \
         && rm -r /var/lib/apt/lists/*
 
 
@@ -30,7 +34,11 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
         && docker-php-ext-install mbstring \
         && docker-php-ext-install mcrypt \
         && docker-php-ext-install pdo_mysql \
-        && docker-php-ext-install mysql
+        && docker-php-ext-install mysql \
+        && docker-php-ext-configure intl \
+        && docker-php-ext-install intl \
+        && docker-php-ext-install exif \
+        && docker-php-ext-install soap
 RUN pecl install /home/memcached.tgz && echo "extension=memcached.so" > /usr/local/etc/php/conf.d/memcached.ini \
         && pecl install /home/gearman.tgz && echo "extension=gearman.so" > /usr/local/etc/php/conf.d/gearman.ini \
         && pecl install /home/redis.tgz && echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini \

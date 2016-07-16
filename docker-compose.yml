@@ -1,21 +1,32 @@
-nginx:
-    build: ./nginx
-    ports:
-      - "80:80"
-    links:
-      - "php"
-    volumes:
-      - ~/opt:/opt
+#dnsmasq:
+#    build: ./dnsmasq
+#    ports:
+#      - "53:53/tcp"
+#      - "53:53/udp"
+#    volumes:
+#      - ~/opt:/opt
+#    cap_add:
+#      - "NET_ADMIN"
 
 php:
     build: ./php
     ports:
       - "9000:9000"
     links:
-      - "mysql"
-      - "memcache"
-      - "redis"
+      #- "dnsmasq"
       #- "gearman"
+      - "mysql"
+    volumes:
+      - ~/opt:/opt
+    dns:
+        - "172.17.0.3"
+
+nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    links:
+      - "php"
     volumes:
       - ~/opt:/opt
 
